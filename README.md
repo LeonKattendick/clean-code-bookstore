@@ -5,6 +5,7 @@ Gruppe: Franz Schillinger, Benedikt Allerberger, Leon Kattendick
 * **Builder Pattern**: Book, Report, Customer & Order Klassen
 * **Singleton Pattern**: Management Klassen
 * **Abstract Factory Pattern**: Reports
+* **Strategy Pattern**: Order Handling
 
 ### Builder Pattern
 Model Klassen können erweitert werden, ohne das alle Implementierungen brechen.
@@ -18,3 +19,8 @@ Die Management-Klassen sollten im System nur einmal erzeugt werden.
 Unterschiedliche Reports werden über die jeweilige Factory angelegt.
 Jeder Report kann dabei mit seinen benötigten Attributen befüllt werden.
 Anschließend können die erstellten Reports aber abstrakt per Schleife verarbeitet werden, ohne das auf die abgeleitete Klasse geachtet werden muss.
+
+### Strategy Pattern
+Bestellungen werden je nach Typ anders abgefertigt. 
+Falls neue Bestellungsarten hinzukommen, kann die Verarbeitung dieser durch das Hinzufügen einer neuen Strategie behandelt werden.
+Dabei muss der Code der bereits existierenden Bestellungsarten nicht verändert werden.

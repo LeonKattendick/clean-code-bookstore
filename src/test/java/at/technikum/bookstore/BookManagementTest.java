@@ -18,7 +18,7 @@ class BookManagementTest {
 
     @Test
     void get_returnsCorrectBooks() {
-        BookManagement.getInstance().add(novel(1));
+        BookManagement.getInstance().add(novel());
 
         Optional<Book> book = BookManagement.getInstance().get(1);
 
@@ -28,7 +28,7 @@ class BookManagementTest {
 
     @Test
     void remove_removesBook() {
-        Book novel = novel(1);
+        Book novel = novel();
 
         BookManagement.getInstance().add(novel);
         BookManagement.getInstance().remove(novel);
@@ -38,9 +38,9 @@ class BookManagementTest {
         assertTrue(book.isEmpty());
     }
 
-    private Book novel(int id) {
+    private Book novel() {
         return Novel.builder()
-                .id(id)
+                .id(1)
                 .name("Novel Book")
                 .author("Cool Author")
                 .pages(400)
