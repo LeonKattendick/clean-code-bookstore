@@ -21,7 +21,7 @@ public class BookManagement {
     }
 
     public void remove(Book book) {
-        books.remove(book);
+        books.removeIf(v -> v.getId() == book.getId());
     }
 
     public static BookManagement getInstance() {
