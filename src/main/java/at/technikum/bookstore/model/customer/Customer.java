@@ -5,7 +5,7 @@ import lombok.experimental.SuperBuilder;
 
 @Data
 @SuperBuilder
-public abstract class Customer {
+public abstract class Customer implements Orderable {
 
     private int id;
 

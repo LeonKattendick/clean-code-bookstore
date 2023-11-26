@@ -8,16 +8,16 @@ import lombok.experimental.SuperBuilder;
 @Data
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
-public class Administrator extends User {
+public class PremiumUser extends User {
 
-    private int permissionLevel;
+    private double priceReduction;
 
     @Override
     public Order createOrderForShoppingCart() {
         Order order = super.createOrderForShoppingCart();
 
         // Shop for free
-        order.setPrice(0);
+        order.setPrice((int) (order.getPrice() * priceReduction));
 
         return order;
     }

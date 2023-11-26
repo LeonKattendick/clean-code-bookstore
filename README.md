@@ -6,6 +6,7 @@ Gruppe: Franz Schillinger, Benedikt Allerberger, Leon Kattendick
 * **Singleton Pattern**: Management Klassen
 * **Abstract Factory Pattern**: Reports
 * **Strategy Pattern**: Order Handling
+* **Composite Pattern**: Customers
 
 ### Builder Pattern
 Model Klassen können erweitert werden, ohne das alle Implementierungen brechen.
@@ -24,3 +25,8 @@ Anschließend können die erstellten Reports aber abstrakt per Schleife verarbei
 Bestellungen werden je nach Typ anders abgefertigt. 
 Falls neue Bestellungsarten hinzukommen, kann die Verarbeitung dieser durch das Hinzufügen einer neuen Strategie behandelt werden.
 Dabei muss der Code der bereits existierenden Bestellungsarten nicht verändert werden.
+
+### Composite Pattern
+Es gibt einen Baum von unterschiedlichen Kundentypen. 
+Die Bestellungen werden je Kunde gleich angelegt.
+Je nach Art des Kunden werden daraufhin die Attribute der Bestellung ggf. abgeändert.
