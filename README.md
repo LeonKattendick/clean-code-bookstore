@@ -14,7 +14,7 @@ Nur notwendiger Attribute können übergeben werden, ohne das ein neuer Konstruk
 Die Management-Klassen sollten im System nur einmal erzeugt werden.
 Über das Singleton Pattern wird diese eine Instanz lazy beim ersten Aufruf erstellt.
 
-## Abstract Factory Pattern
+### Abstract Factory Pattern
 Unterschiedliche Reports werden über die jeweilige Factory angelegt.
 Jeder Report kann dabei mit seinen benötigten Attributen befüllt werden.
 Anschließend können die erstellten Reports aber abstrakt per Schleife verarbeitet werden, ohne das auf die abgeleitete Klasse geachtet werden muss.
